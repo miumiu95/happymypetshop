@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>happymypetshop</title>
+    <script src="https://code.jquery.com/jquery-3.1.0.js"></script>
+    <style>
+        *{margin:0; padding:0;}
+        /* img 1배수로 가져 옴 */
+        #wrap{
+            width:1000px; margin: 0 auto;
+            position: relative;
+            height:3216px;
+            background: url("img/background.png") no-repeat;
+            /* 크기가 작으면, 반복됨 no-repeat를 써줌 */
+            background-size: 100%;
+        }
+        img{width:100%;}
+
+        .heart1{
+            position: absolute;
+            width: 120px;
+            height: 120px;
+            left: 175px;
+            top: 595px;            
+        }
+        .heart2{
+            position: absolute;
+            width: 120px;
+            height: 120px;
+            left: 839px;
+            top: 535px;
+        }
+        .heart3{
+            position: absolute;
+            width: 80px;
+            height: 80px;
+            left: 41px;
+            top: 455px;
+        }
+        .heart4{
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            left: 205px;
+            top: 333px;
+        }
+        .heart5{
+            position: absolute;
+            width: 80px;
+            height: 80px;
+            left: 832px;
+            top: 333px;
+        }
+        .heart6{
+            position: absolute;
+            width: 60px;
+            height: 60px;
+            left: 61px;
+            top: 254px;
+        }
+        .heart7{
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            left: 942px;
+            top: 272px;
+        }
+
+        .heart.on{
+            transform: translate(0);            
+            transition: .6s;
+            opacity: 1;
+        }
+        .heart{
+            transform: translate(20px,20px);
+            opacity: 0;            
+        }
+
+        .heart.on.heart1{
+            transition-delay:.6s ;
+        }
+        .heart.on.heart2{
+            transition-delay:.9s ;
+        }
+        .heart.on.heart3{
+            transition-delay:1.2s ;
+        }
+        .heart.on.heart4{
+            transition-delay:1.8s ;
+        }
+        .heart.on.heart5{
+            transition-delay:1.5s ;
+        }
+        .heart.on.heart6{
+            transition-delay:2.1s ;
+        }
+        .heart.on.heart7{
+            transition-delay:2.4s ;
+        }
+    </style>
+
+</head>
+<body>
+    <div id="wrap">
+        <img src="img/heart1.png" alt="" class="heart heart1">
+        <img src="img/heart2.png" alt="" class="heart heart2">
+        <img src="img/heart3.png" alt="" class="heart heart3">
+        <img src="img/heart4.png" alt="" class="heart heart4">
+        <img src="img/heart5.png" alt="" class="heart heart5">
+        <img src="img/heart6.png" alt="" class="heart heart6">
+        <img src="img/heart7.png" alt="" class="heart heart7">
+    </div>
+    
+    <script>
+        window.addEventListener("load", scr);
+        function scr(){
+            $(".heart").addClass("on");
+        }
+    </script>
+    <!-- <script>
+        window.addEventListener("scroll", scr);
+        function scr(){
+            console.log(scrollY);
+            if(scrollY>200){
+                $(".heart").addClass("on");
+            }else{
+                $(".heart").removeClass("on");
+            }
+        }
+    </script> -->
+</body>
+</html>
